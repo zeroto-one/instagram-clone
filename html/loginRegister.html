@@ -1,0 +1,77 @@
+<div class="wrapper">
+  <article class="box login">
+    <div class="img-wrapper">
+      <img src="https://picsum.photos/1000?random=1" alt="" />
+    </div>
+    <div class="form-wrapper">
+      <form action="" onsubmit="loginSubmit(event)">
+        <h2>Log In</h2>
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          name="loginUser"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          name="pass"
+          required
+        />
+        <input type="submit" name="loginBtn" value="Log In" />
+        <p style="color: red" class="warning"></p>
+        <p>
+          New here? Make a account.
+          <a href="#" onclick="toggleForm()">Register Here</a>
+        </p>
+      </form>
+    </div>
+  </article>
+
+  <article class="box register">
+    <div class="form-wrapper">
+      <form class="Rform" action="" onsubmit="registerSubmit(event);">
+        <h2>Register</h2>
+        <input
+          type="email"
+          placeholder="Email Address"
+          name="email"
+          id="email"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Username"
+          name="registerUser"
+          id="userN"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          name="pass"
+          id="pass"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm password"
+          name="cPass"
+          id="cPass"
+          required
+        />
+        <input type="submit" name="registerBtn" value="Register" />
+        <p>
+          Already part of us?
+          <a href="#" onclick="toggleForm()">Login here</a>
+        </p>
+        <div id="error"></div>
+      </form>
+    </div>
+    <div class="img-wrapper">
+      <img src="https://picsum.photos/1600?random=2" alt="" />
+    </div>
+  </article>
+</div>

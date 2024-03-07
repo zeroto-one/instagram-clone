@@ -1,0 +1,352 @@
+.wrapper {
+  position: relative;
+  font-family: var(--secondary-font);
+  margin: 0 auto;
+  max-width: 935px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.wrapper main {
+  position: relative;
+  max-width: 600px;
+}
+
+/* ********* Stories section styling ************ */
+
+.wrapper main .stories-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 15px 0 20px 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 0 0 1px rgba(153, 153, 153, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+
+.arrow-left, .arrow-right 
+{
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 30%;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 3;
+  margin-top: auto;
+  font-size: 1rem;
+}
+
+
+.arrow-left {
+  left:5px;
+}
+
+.arrow-left.display {
+  display: none;
+}
+
+
+.arrow-right {
+  left: none;
+  right: 5px;
+  margin-left: auto;
+}
+
+.wrapper main .stories-wrapper .story {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.wrapper main .stories-wrapper .story li {
+  flex: 0 0 auto;
+  width: 55px;
+  padding: 5px 0 5px 5px;
+  text-align: center;
+}
+
+.wrapper main .stories-wrapper .story li:hover {
+  transform: scale(1.03);
+}
+
+.wrapper main .stories-wrapper .story li p {
+  /* margin-top: 5px; */
+  position: relative;
+  top: 6px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.wrapper main .stories-wrapper .story li div {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px tomato;
+}
+
+.wrapper main .stories-wrapper .story li div.viewed {
+  box-shadow: 0 0 0 4px rgba(170, 170, 170, 0.74);
+}
+
+.wrapper main .stories-wrapper .story li img {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px white;
+}
+
+/* ********** Post section styling **************** */
+
+.wrapper main .post-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+}
+
+.wrapper main .post-wrapper .post-container {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 0 1px rgba(153, 153, 153, 0.4);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+}
+
+.post-container .post-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.post-container .post-header .userInfo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-container .post-header .userInfo img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 30px;
+  cursor: pointer;
+}
+
+.post-container .post-header .userInfo .username {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.post-container .post-header .post-options {
+  font-size: 1.3rem;
+}
+
+.post-container .post-img {
+  width: 100%;
+  max-height: 600px;
+  aspect-ratio: 1/1;
+  background-color: whitesmoke;
+}
+
+.post-container .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-container .post-body {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.post-container .post-body .post-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-container .post-body .post-stats i {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.post-container .post-body .post-stats i:hover {
+  color: tomato;
+}
+
+
+.post-container .post-body .post-stats i:nth-last-child(1) {
+  margin-left: auto;
+}
+
+
+.post-container .post-body .post-info .likes {
+  margin: 15px 0 5px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.post-container .post-body .post-info .desc {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 3px;
+}
+
+.post-container .post-body .post-info .username {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.post-container .post-body .post-info .comments {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 2px;
+}
+
+.post-container .post-body .post-info .time {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.post-container .postComment {
+  width: 100%;
+  padding: 5px 20px;
+  border-top: 1px solid whitesmoke;
+  display: flex;
+}
+
+.post-container .postComment p {
+  font-size: 1.7rem;
+  padding-right: 15px;
+  opacity: 0.7;
+}
+
+.post-container .postComment input {
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+.post-container .postComment input:nth-child(3) {
+  margin-left: auto;
+  background-color: transparent;
+  color: cornflowerblue;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* ******************************************* */
+/* Footer styling */
+
+.wrapper footer {
+  position: sticky;
+  top: 5.75rem;
+  width: 300px;
+  height: max-content;
+  background-color: white;
+  padding: 20px 15px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.wrapper footer .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.wrapper footer .profile div:nth-child(2) {
+  font-size: 14px;
+}
+.wrapper footer .profile div:nth-child(3) {
+  margin-left: auto;
+  color: cornflowerblue;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wrapper footer .suggestions {
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.wrapper footer .suggestions .sec1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper footer .suggestions .sec1 p:nth-child(1) {
+  font-size: 15px;
+  color: #8e8e8e;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.wrapper footer .suggestions .sec2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper footer .suggestions .sec2 li {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper footer .suggestions .sec2 li img {
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 15px;
+  border: 1px solid rgba(40, 40, 40, 0.5);
+}
+
+.wrapper footer .suggestions .sec2 li p:nth-child(3) {
+  margin-left: auto;
+  color: cornflowerblue;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wrapper footer .footer-menu ul {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1000px) {
+  .wrapper footer {
+    display: none;
+  }
+
+  .wrapper {
+    max-width: 1000px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper main {
+    max-width: 100%;
+  }
+
+  .wrapper main .post-wrapper .post-container {
+    margin-bottom:1rem;
+  }
+}

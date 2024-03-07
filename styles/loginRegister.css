@@ -1,0 +1,178 @@
+.model {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.model .wrapper {
+  position: relative;
+  margin-top: 2rem;
+  width: 800px;
+  height: 500px;
+  z-index: 2;
+  background-color: #ffffff;
+  font-family: var(--secondary-font);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 0 0px 1px #6161614d;
+  opacity: 0;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, 0.5s;
+}
+
+.model.display {
+  display: flex;
+}
+
+.model .wrapper.opacity {
+  opacity: 1;
+}
+
+.model .wrapper:hover {
+  box-shadow: 0px 0 0px 0.3px #6161614d, 10px 10px 5px 1px #6161614d;
+  transform: translate(-5px, -5px);
+}
+
+.model .wrapper .box {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.model .wrapper .box .img-wrapper {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.model .wrapper .box .img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* visibility: hidden; */
+}
+
+.model .wrapper .box .form-wrapper {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+.model .wrapper .box .form-wrapper form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.model .wrapper .box .form-wrapper h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3c3c3c;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.model .wrapper .box .form-wrapper form input {
+  outline: none;
+  border: none;
+  padding: 13px 15px;
+  background-color: whitesmoke;
+  color: #333;
+  font-size: 400;
+  letter-spacing: 1px;
+}
+
+.model .wrapper .box .form-wrapper form input:nth-last-of-type(1) {
+  max-width: max-content;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  background-color: #fa3a47ee;
+  border-radius: 2px;
+  color: white;
+}
+
+.model .wrapper .box .form-wrapper form p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* pointer event for register box */
+.model .wrapper .register {
+  pointer-events: initial;
+}
+
+.model .wrapper.active .register {
+  pointer-events: none;
+}
+
+/* register without active class */
+.model .wrapper .register .form-wrapper {
+  top: 0%;
+}
+.model .wrapper .register .img-wrapper {
+  top: 0%;
+}
+
+/* login without active class */
+.model .wrapper .login .form-wrapper {
+  top: 100%;
+}
+.model .wrapper .login .img-wrapper {
+  top: -100%;
+}
+
+/* Login with active class */
+.model .wrapper.active .login .form-wrapper {
+  top: 0%;
+}
+.model .wrapper.active .login .img-wrapper {
+  top: 0%;
+}
+
+/* register with active class */
+.model .wrapper.active .register .form-wrapper {
+  top: 100%;
+}
+.model .wrapper.active .register .img-wrapper {
+  top: -100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .model .wrapper {
+    max-width: 400px;
+    margin: 0 10px;
+  }
+
+  .model .wrapper:hover {
+    transform: none;
+  }
+
+  .model .wrapper .box .img-wrapper {
+    display: none;
+  }
+  .model .wrapper .box .form-wrapper {
+    width: 100%;
+  }
+}
